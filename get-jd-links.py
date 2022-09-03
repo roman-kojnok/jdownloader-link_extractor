@@ -4,6 +4,7 @@ import os
 import glob
 import shutil
 from zipfile import ZipFile
+import json
 
 # get username
 iam = os.getlogin()
@@ -48,3 +49,38 @@ with ZipFile(archiv) as zf:
     zf.extractall(destination)
     zf.close()
     print(archiv + " was extracted successfully!")
+
+# set full path to extracted files
+fullPath = jdown + "/temp/"
+files = os.listdir(fullPath)
+links = []
+
+ignorelist = [".git", ".zip", "README.md"]
+
+# collecting all links from extracted files
+for idx, file in enumerate(files, 1):
+    print("File no: " + str(idx) + "/" + str(len(files)) + ".")
+    if file in ignorelist:
+        print("Skipping " + str(file))
+        continue
+    f = open(fullPath + file, 'r')
+    try:
+        jsdata = json.loads(f.read())
+    except ValueError:
+        print("This file is not a JSON File")
+        continue
+    if 'sourceUrls' in jsdata.keys():
+        links.append(str(jsdata['sourceUrls'][0]))
+    else:
+        print("No url, going forward.")
+    f.close()
+
+# write all collected links to a text file
+file = open('my_jd_links.txt', 'w')
+
+for link in links:
+    file.write(str(link) + "\n")
+    
+finStep = os.path.join(jdown, new_dir)    
+shutil.rmtree(finStep)
+print("Done")    
