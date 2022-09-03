@@ -3,7 +3,7 @@
 [JDownloader Homepage](https://jdownloader.org/home/index)
 ## Description
 
-jdownloader-link_extractor is an advanced Python script, that will extract all links from a **jDownloader 2** file list and export them to a text file.
+jdownloader-link_extractor is an advanced Python script, that will extract all links from a **JDownloader 2** file list and export them to a text file.
 
 # Thanks to
 [hherglotz](https://github.com/hherglotz/linkextractor)
