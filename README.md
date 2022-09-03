@@ -7,7 +7,7 @@ jdownloader-link_extractor is an advanced Python script, that will extract all l
 
 # Thanks to
 [hherglotz](https://github.com/hherglotz/linkextractor)
-for an idea and his source code, which I used as the base of my project.
+for an idea and his source code, which I used as the base of this project.
 
 ## What jdownloader-link_extractor does
 - Firstly, after executing the script, it will detect, which OS you are using for setting the **JDownloader Installation Directory PATH**.
