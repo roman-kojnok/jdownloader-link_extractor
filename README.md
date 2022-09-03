@@ -19,12 +19,12 @@ for an idea and his source code, which I used as the base of my project.
 
 ## Prerequisites
 **Default Installation PATH of JDownloader**
-If you haven't installed Python on your system yet, get it directly at (https://www.python.org/).
-JD-backup uses libraries `os`, `platform`, `glob`, `shutil`, `zipfile` and `json`.
+-If you haven't installed Python on your system yet, get it directly at (https://www.python.org/).
+-jdownloader-link_extractor uses libraries `os`, `platform`, `glob`, `shutil`, `zipfile` and `json`.
 
 ## Tests:
-**jdownloader-link_extractor** has already been tested on Windows 7, Mac OS Big Sur and Debian Buster with Python 3.8 version.
-I haven't found any differencies during a backup, either JDownloader 2 was running or not.
+**jdownloader-link_extractor** has already been tested on Windows 7, Mac OS Big Sur and Debian Buster with Python 3.8 version, but any version of python3 should work as well.
+I haven't found any differencies during an extraction, either JDownloader 2 was running or not.
 
 ## Installation
 No special installation is needed. 
