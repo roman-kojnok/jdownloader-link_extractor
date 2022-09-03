@@ -3,6 +3,7 @@ import platform
 import os
 import glob
 import shutil
+from zipfile import ZipFile
 
 # get username
 iam = os.getlogin()
